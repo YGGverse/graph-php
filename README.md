@@ -27,7 +27,7 @@ foreach ($calendarMonth->getNodes() as $day => $node)
   $calendarMonth->addNode(
     $day,          // required, number of day, on this example we are processing all of days in the initiated month
     rand(1, 1000), // required, set some digit value for this day and current layer
-    'label 1',     // optional, label text that could be displayed on element over
+    'label 0',     // optional, label text that could be displayed on element over
     'class-name',  // optional, customize output with CSS class
     0              // optional, define chart layer if you want to build multiple charts in single day case
                    // e.g. 1, 2, 3... or some keyword. first layer has 0 index by default.
@@ -38,7 +38,7 @@ foreach ($calendarMonth->getNodes() as $day => $node)
   {
     // To build independent chart layer, make sure that layer attribute increased, for example to 1
     $calendarMonth->addNode($day, rand(0, 1000), 'my hourly label 1, 'my-class-name-1', 1);
-    $calendarMonth->addNode($day, rand(0, 1000), 'my hourly label 1, 'my-class-name-1', 1);
+    $calendarMonth->addNode($day, rand(0, 1000), 'my hourly label 2, 'my-class-name-2', 1);
   }
 }
 ```
