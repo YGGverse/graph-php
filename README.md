@@ -33,7 +33,7 @@ foreach ($calendarMonth->getNodes() as $day => $node)
                    // e.g. 1, 2, 3... or some keyword. first layer has 0 index by default.
   );
 
-  // Make second layer for hourly stats in tis day...
+  // Make second layer for hourly stats in tis day with few variables
   for ($hour = 0; $hour < 24; $hour++)
   {
     // To build independent chart layer, make sure that layer attribute increased, for example to 1
