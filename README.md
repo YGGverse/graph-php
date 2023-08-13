@@ -45,10 +45,17 @@ foreach ($calendarMonth->getNodes() as $day => $node)
 
 ###### Client-side
 
-Coming soon on [YGGstate](https://github.com/YGGverse/YGGstate) or play with dump generated:
+ * [CSS](https://github.com/YGGverse/YGGstate/blob/main/src/public/assets/theme/default/css/yggverse/graph/calendar/month.css)
+ * [PHP/HTML](https://github.com/YGGverse/YGGstate/blob/main/src/public/index.php)
+
+To make your own implementation, play with:
 
 ```
 var_dump(
   $calendarMonth->getNodes()
 );
 ```
+
+###### Live examples
+
+ * [https://94.140.114.241/yggstate](https://94.140.114.241/yggstate)
