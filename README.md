@@ -7,9 +7,13 @@ Build calendar graphs with unlimited chart layers
 
 #### [Month](https://github.com/YGGverse/graph-php/blob/main/src/Calendar/Month.php)
 
-##### Example
-
 ![2 layers example](https://github.com/YGGverse/graph-php/blob/main/media/calendar/example-2-layers.png?raw=true)
+
+##### Live examples
+
+ * [https://94.140.114.241/yggstate](https://94.140.114.241/yggstate)
+
+##### Usage
 
 ###### Server-side
 
@@ -55,7 +59,3 @@ var_dump(
   $calendarMonth->getNodes()
 );
 ```
-
-###### Live examples
-
- * [https://94.140.114.241/yggstate](https://94.140.114.241/yggstate)
