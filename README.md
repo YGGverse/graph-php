@@ -11,7 +11,7 @@ Build calendar graphs with unlimited chart layers
 
 ##### Live examples
 
- * [https://94.140.114.241/yggstate](https://94.140.114.241/yggstate)
+ * [http://94.140.114.241/yggstate](http://94.140.114.241/yggstate)
 
 ##### Usage
 
