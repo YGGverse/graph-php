@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YGGverse\Graph\Calendar;
+namespace Yggverse\Graph\Calendar;
 
 class Month
 {
