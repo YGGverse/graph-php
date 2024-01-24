@@ -33,21 +33,24 @@ class Month
     ];
   }
 
-  public function getNodes() : object
+  public function getNodes(string $height = 'month') : object
   {
-    // Calculate month totals
-    $total = [];
+    // Calculate totals
+    $hours = [];
+    $month = 0;
 
     foreach ($this->_node as $i => $day)
     {
       foreach ($day as $l => $layer)
       {
-        $total[$i][$l] = 0;
+        $hours[$i][$l] = 0;
 
         foreach ($layer as $data)
         {
-          $total[$i][$l] += $data['value'];
+          $hours[$i][$l] += $data['value'];
         }
+
+        $month = $month + $hours[$i][$l];
       }
     }
 
@@ -66,8 +69,16 @@ class Month
         // Calculate column width, height, offset
         foreach ($layer as $j => $data)
         {
+          switch ($height)
+          {
+            case 'day':
+              $this->_node[$i][$l][$j]['height'] = $hours[$i][$l] ? ceil($data['value'] / $hours[$i][$l] * 100) : 0;
+            break;
+            default:
+              $this->_node[$i][$l][$j]['height'] = $month ? round($data['value'] * ($month / 100)) : 0;
+          }
+
           $this->_node[$i][$l][$j]['width']  = $width;
-          $this->_node[$i][$l][$j]['height'] = $total[$i][$l] ? ceil($data['value'] / $total[$i][$l] * 100) : 0;
           $this->_node[$i][$l][$j]['offset'] = $width * $j;
         }
       }
