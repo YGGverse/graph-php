@@ -33,24 +33,22 @@ class Month
     ];
   }
 
-  public function getNodes(string $height = 'month') : object
+  public function getNodes() : object
   {
-    // Calculate totals
-    $hours = [];
-    $month = 0;
+    // Calculate max value
+    $max = 0;
 
     foreach ($this->_node as $i => $day)
     {
       foreach ($day as $l => $layer)
       {
-        $hours[$i][$l] = 0;
-
         foreach ($layer as $data)
         {
-          $hours[$i][$l] += $data['value'];
+          if ($data['value'] > $max)
+          {
+            $max = $data['value'];
+          }
         }
-
-        $month = $month + $hours[$i][$l];
       }
     }
 
@@ -69,15 +67,7 @@ class Month
         // Calculate column width, height, offset
         foreach ($layer as $j => $data)
         {
-          switch ($height)
-          {
-            case 'day':
-              $this->_node[$i][$l][$j]['height'] = $hours[$i][$l] ? ceil($data['value'] / $hours[$i][$l] * 100) : 0;
-            break;
-            default:
-              $this->_node[$i][$l][$j]['height'] = $month ? ceil($data['value'] * ($month / 100)) : 0;
-          }
-
+          $this->_node[$i][$l][$j]['height'] = $max ? ceil($data['value'] / $max * 100) : 0;
           $this->_node[$i][$l][$j]['width']  = $width;
           $this->_node[$i][$l][$j]['offset'] = $width * $j;
         }
