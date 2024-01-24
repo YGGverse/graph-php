@@ -9,9 +9,10 @@ Build calendar graphs with unlimited chart layers
 
 ![yggverse-graph-php-example](https://github.com/YGGverse/graph-php/assets/108541346/bbac7626-1f0b-476c-b154-f8a6f2933530)
 
-##### Live examples
+##### Examples
 
- * [http://94.140.114.241/yggstate](http://94.140.114.241/yggstate)
+ * [YGGstate](https://github.com/YGGverse/YGGstate) - Yggdrasil Network Explorer
+ * [HLState](https://github.com/YGGverse/HLState) -  Web Monitor for Half-Life Servers
 
 ##### Usage
 
