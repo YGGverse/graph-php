@@ -75,7 +75,7 @@ class Month
               $this->_node[$i][$l][$j]['height'] = $hours[$i][$l] ? ceil($data['value'] / $hours[$i][$l] * 100) : 0;
             break;
             default:
-              $this->_node[$i][$l][$j]['height'] = $month ? round($data['value'] * ($month / 100)) : 0;
+              $this->_node[$i][$l][$j]['height'] = $month ? ceil($data['value'] * ($month / 100)) : 0;
           }
 
           $this->_node[$i][$l][$j]['width']  = $width;
